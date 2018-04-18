@@ -6,3 +6,5 @@ _minted-test
 *.out
 *.pdf
 *.run.xml
+auto/
+_minted-healy-article/
