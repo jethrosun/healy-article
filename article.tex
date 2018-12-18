@@ -36,7 +36,8 @@
 %% Your bibliography file or files go here. Biblatex allows for
 %% multiple \addbibresource{} statements. If using bibtex you must use
 %% the older \bibliography{} declaration instead
-\addbibresource{socbib.bib}    % http://kjhealy.github.com/socbibs/
+%\addbibresource{socbib.bib}    % http://kjhealy.github.com/socbibs/
+\addbibresource[datatype=bibtex]{paper.bib}          %% here
 
 %% Some formatting tweaks to biblatex-chicago. Comment out if not
 %% using this biblatex style.
@@ -50,11 +51,12 @@
 \DeclareFieldFormat{booktitle}{\mkbibemph{#1}} % for edited volumes
 
 %% Name, Title, Affiliation, Contact. Change as needed.
-\def\myaffiliation{EPFL, Switzerland}
-\def\myauthor{Heather Miller}
-\def\myemail{\small{\texttt{\href{mailto:heather.miller@epfl.ch}{heather.miller@epfl.ch}}}}
+\def\myaffiliation{Northeastern University, U.S.}
+\def\myauthor{Jethro Shuwen Sun}
+\def\myemail{\small{\texttt{\href{mailto:jethrosun@ccs.neu.edu}{jethrosun@ccs.neu.edu}}}}
 \def\mytitle{Article Title}
-\def\mykeywords{Heather, Miller, Heather Miller, Scala, Programming Languages, Functional Programming, Distributed Programming}
+\def\mykeywords{Jethro, Sun, Shuwen, Jethro Shuwen Sun, Jethro Sun, Jethro S.
+Sun, Systems, Networking, Systems and Networking}
 
 
 %% Hyperlinks
@@ -95,58 +97,26 @@
 
 \title{\bigskip \bigskip {{\mytitle}}}
 
-\author{\myauthor \\
+\author{\myauthor\\
   \emph{\myaffiliation} \\ \myemail}% \thanks{I am grateful to }
 
 \date{{\scriptsize{\texttt{}}}}
 % \date{{\scriptsize{\texttt{\href{mailto:heather.miller@epfl.ch}{heather.miller@epfl.ch}}}}}
 
-\published{\footnotesize Incomplete Draft. Please do not cite without permission.}
-
-
-\published{Incomplete Draft. Please do not cite without permission.}
+%\published{\footnotesize Incomplete Draft. Please do not cite without permission.}
+%\published{Incomplete Draft. Please do not cite without permission.}
 
 \maketitle
 
 % Include version information in footer.
 \thispagestyle{kjhgit}
 
+
 \begin{abstract}
   \textit{Abstract:} And consider this an abstract.
 \end{abstract}
 
-% \epigraphfontsize{\footnotesize}
-% \setlength{\epigraphwidth}{4in}
-% \setlength{\epigraphrule}{0pt}
-% \setlength{\beforeepigraphskip}{0pt}
-% \setlength{\afterepigraphskip}{0pt}
-%
-% \epigraph{}{}
-
-\section{Introduction}
-
-Lorem ipsum dolor sit amet, et his nostro eirmod dissentiunt. Vel audiam
-maiestatis et. Te duo brute lucilius oportere, ea utamur nostrud duo, cu vis
-nobis tractatos efficiendi. In cibo alienum vis. Sumo salutatus duo ei, sit zril
-sensibus ad. Sed quodsi albucius ne, solum docendi tacimates eu mei, has liber
-neglegentur contentiones id.
-
-\begin{minted}{scala}
-val x = future { someExpensiveComputation() }
-val y = future { someOtherExpensiveComputation() }
-val z = for (a <- x; b <- y) yield a*b
-for (c <- z) println("Result: " + c)
-println("Meanwhile, the main thread goes on!")
-\end{minted}
-
-An summo alienum qualisque vix, cum odio atqui ad. An pri decore comprehensam,
-quas appareat eu eam, vis nisl vivendum electram ei. Has ex alii veniam
-theophrastus, quas facilis ex vim, duo viderer molestie ne. Hinc persecuti
-conclusionemque duo id, te sit tale iusto, nusquam eligendi conclusionemque vim
-ut. An nam omnis veniam tamquam, ea essent vivendo vel, assentior democritum te
-cum.
-
-
+\input{body}
 
 %% Bibliography. If you are not using biblatex, comment out this line.
 \printbibliography
