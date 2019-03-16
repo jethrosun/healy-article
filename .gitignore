@@ -3,6 +3,8 @@ _minted-test
 *.log
 *.aux
 *.bcf
+*.bbl
+*.blg
 *.out
 *.pdf
 *.run.xml
